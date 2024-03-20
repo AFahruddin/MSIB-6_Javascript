@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div id="div1">
+    Hewan Gajah
+    <audio id="audio1" src="gajah.mp3"></audio>
+</div>
+<div id="div2">
+    Hewan Kuda
+    <audio id="audio2" src="kuda.mp3"></audio>
+</div>
+<div id="div3">
+    Hewan Ayam
+    <audio id="audio3" src="ayam.mp3"></audio>
+</div>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#div1").mouseover(function(){
+            $(this).css({
+                background: "url('https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/krjogja/news/2023/03/25/498917/sering-mimpi-melihat-gajah-ternyata-ini-arti-dan-maknanya-230325v.jpg')",
+            });
+            document.getElementById("audio1").play(); 
+        });
+        
+        $("#div1").mouseout(function(){
+            $(this).css({
+                background: "aqua"
+            });
+            document.getElementById("audio1").pause();
+            document.getElementById("audio1").currentTime = 0; 
+        });
+        
+        $("#div2").mouseover(function(){
+            $(this).css({
+                background: "url('https://akcdn.detik.net.id/visual/2016/02/19/74990601-4c0c-4cc7-bda0-32df5c9abcb5_169.jpg?w=650')",
+            });
+            document.getElementById("audio2").play(); 
+        });
+        
+        $("#div2").mouseout(function(){
+            $(this).css({
+                background: "pink"
+            });
+            document.getElementById("audio2").pause();
+            document.getElementById("audio2").currentTime = 0; 
+        });
+        $("#div3").mouseover(function(){
+            $(this).css({
+                background: "url('https://akcdn.detik.net.id/visual/2022/01/05/ilustrasi-hewan-ternak-ayam_169.jpeg?w=650')",
+            });
+            document.getElementById("audio3").play(); 
+        });
+        
+        $("#div3").mouseout(function(){
+            $(this).css({
+                background: "white"
+            });
+            document.getElementById("audio3").pause();
+            document.getElementById("audio3").currentTime = 0; 
+        });
+    });
+</script>
+</body>
+</html>
